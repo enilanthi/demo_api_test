@@ -23,7 +23,6 @@
 
 ### Third Party Library Usage
 - ```Unit test runner - junit 4.12```
-- ```Logging support - log4j 1.2.17```
 - ```Testing and validating REST services -rest-assured 3.0.0```
 - ```Easily create matchers - org.hamcrest 2.0.0.0```
 - ```BDD support - info.cukes 1.2.5```
