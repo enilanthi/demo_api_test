@@ -104,38 +104,4 @@ public class CountryDetailStepDefs {
         validatableResponse = httpRequest.post("/register").then();
         response = validatableResponse.extract().response();
     }
-
-    @When("^User wants to add a new country: \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
-    public void userWantsToAddANewCountry2(String name, String alpha2code, String alpha3code) {
-
-        RequestSpecification httpRequest = given();
-        httpRequest.header("Content-Type", "application/json");
-
-        JsonObject country = new JsonObject();
-        country.addProperty("name", name);
-        country.addProperty("alpha2_code", alpha2code);
-        country.addProperty("alpha3_code", alpha3code);
-
-        httpRequest.body(country.toString());
-
-        validatableResponse = httpRequest.post("/register").then();
-        response = validatableResponse.extract().response();
-    }
-
-    @When("^User wants to add a new country: \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
-    public void userWantsToAddANewCountry1(String name, String alpha2code, String alpha3code) {
-
-        RequestSpecification httpRequest = given();
-        httpRequest.header("Content-Type", "application/json");
-
-        JsonObject country = new JsonObject();
-        country.addProperty("name", name);
-        country.addProperty("alpha2_code", alpha2code);
-        country.addProperty("alpha3_code", alpha3code);
-
-        httpRequest.body(country.toString());
-
-        validatableResponse = httpRequest.post("/register").then();
-        response = validatableResponse.extract().response();
-    }
 }
