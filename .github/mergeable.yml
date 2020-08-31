@@ -3,10 +3,10 @@ mergeable:
   - when: pull_request.opened, pull_request.edited, pull_request.synchronize
     validate:
       - do: size
-        ignore: ["**/*.json", "**/*.yml", "**/*.conf"]
+        ignore: ["**/*.json", "**/*.yml", "**/*.conf", "**/step_definitions/**"]
         lines:
           max:
-            count: 10
+            count: 50
             message: The change is very big for reviewing. Try splitting the PR into multiple self-contained changes.
     pass:
       - do: checks
