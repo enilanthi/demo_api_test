@@ -6,7 +6,7 @@ mergeable:
         ignore: ["**/*.json", "**/*.yml", "**/*.conf"]
         lines:
           max:
-            count: 100
+            count: 10
             message: The change is very big for reviewing. Try splitting the PR into multiple self-contained changes.
     pass:
       - do: checks
@@ -20,7 +20,7 @@ mergeable:
         payload:
           title: Pull request size is too large! Click on Details for more info ->
           summary: |
-            The pull request size is too large. Aim for less than 100 lines of additions and deletions, or try to split the PR.
+            The pull request size is too large. Aim for less than 10 lines of additions and deletions, or try to split the PR.
             This doesn't mean that your code can't be merged, but it means that it needs to be looked carefully by the repository
             owners, and merged by a repository admin.
     error:
