@@ -3,7 +3,7 @@ mergeable:
   - when: pull_request.opened, pull_request.edited, pull_request.synchronize
     validate:
       - do: size
-        ignore: ["**/*.json", "**/*.yml", "**/*.conf", "**/step_definitions/**"]
+        ignore: ["**/*.json", "**/*.yml", "**/*.conf", "automation/**"]
         lines:
           max:
             count: 50
