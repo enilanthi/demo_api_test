@@ -4,7 +4,7 @@ mergeable:
     validate:
       - do: size
         ignore: ["**/*.json", "**/*.yml", "**/*.conf",
-                 "automation/**"]
+                 "automation1/**"]
         lines:
           max:
             count: 32
