@@ -33,10 +33,3 @@ Feature: Retrieve Country Details Feature
     Then the response code should be "200"
     And a message should be returned saying "USX" not found
     But no results should be returned
-
-
-  @Smoke
-  Scenario: Add a new country through POST request and validate the response
-    Given The webservice is up and running
-    When User wants to add a new country: "Test Country", "TC", "TCY"
-    Then the response code should be "201"
