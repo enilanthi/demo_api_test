@@ -5,6 +5,9 @@ mergeable:
       - do: size
         ignore: ["**/*.json", "**/*.yml", "**/*.conf"]
         lines:
+          total:
+            count: 100
+            message: Too much total. Try splitting the PR into multiple self-contained changes.
           additions:
             count: 70
             message: Too much additions. Try splitting the PR into multiple self-contained changes.
