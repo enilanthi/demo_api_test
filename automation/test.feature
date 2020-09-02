@@ -26,10 +26,3 @@ Feature: Retrieve Country Details Feature
       | Germany                                              | DE          | DEU         |
 
 
-    @Smoke
-    Scenario: Try to get information for not exist countries and validate the response
-      Given The webservice is up and running
-      When User wants to get information for unexisted country: "USX"
-      Then the response code should be "200"
-      And a message should be returned saying "USX" not found
-      But no results should be returned

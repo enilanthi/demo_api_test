@@ -9,7 +9,7 @@ mergeable:
             count: 70
             message: Too much additions. Try splitting the PR into multiple self-contained changes.
           deletions:
-            count: 12
+            count: 5
             message: Too much delettions. Try splitting the PR into multiple self-contained changes.
     pass:
       - do: checks
