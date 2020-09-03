@@ -6,7 +6,7 @@ mergeable:
         ignore: ["**/*.json", "**/*.yml", "**/*.conf"]
         lines:
           total:
-            count: 72
+            count: 71
             message: Too much total. Try splitting the PR into multiple self-contained changes.
           additions:
             count: 70
@@ -14,24 +14,24 @@ mergeable:
           deletions:
             count: 10
             message: Too much delettions. Try splitting the PR into multiple self-contained changes.
-    pass:
-      - do: checks
-        status: success
-        payload:
-          title: Pull request size is within limits.
-          summary: Pull request size is within limits.
-    fail:
-      - do: checks
-        status: failure
-        payload:
-          title: Pull request size is too large! Click on Details for more info ->
-          summary: |
-            The pull request size is too large. Aim for less than 32 lines of additions and deletions, or try to split the PR.
-            This doesn't mean that your code can't be merged, but it means that it needs to be looked carefully by the repository
-            owners, and merged by a repository admin.
-    error:
-      - do: checks
-        status: action_required
-        payload:
-          title: Something went wrong, could not determine PR Size.
-          summary: Something went wrong with Mergeable. Try re-running the validation.
+#    pass:
+#      - do: checks
+#        status: success
+#        payload:
+#          title: Pull request size is within limits.
+#          summary: Pull request size is within limits.
+#    fail:
+#      - do: checks
+#        status: failure
+#        payload:
+#          title: Pull request size is too large! Click on Details for more info ->
+#          summary: |
+#            The pull request size is too large. Aim for less than 32 lines of additions and deletions, or try to split the PR.
+#            This doesn't mean that your code can't be merged, but it means that it needs to be looked carefully by the repository
+#            owners, and merged by a repository admin.
+#    error:
+#      - do: checks
+#        status: action_required
+#        payload:
+#          title: Something went wrong, could not determine PR Size.
+#          summary: Something went wrong with Mergeable. Try re-running the validation.
